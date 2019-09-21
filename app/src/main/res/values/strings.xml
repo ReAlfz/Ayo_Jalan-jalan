@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My TA</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in">Log in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="user">user</string>
+    <string name="send">Send</string>
+    <string name="enter_massage">Enter Massage</string>
+    <string name="register">Register</string>
+    <string name="ubah_nomor">ubah nomor</string>
+    <string name="ubah_email">Ubah email</string>
+    <string name="ubah_nama">Ubah nama</string>
+    <string name="nomor">Nomor</string>
+    <string name="nama">Nama</string>
+    <string name="sign_Up">Sign Up</string>
+    <string name="sign_out">Sign out</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="ayo_jalan_jalan_men">Ayo Jalan-jalan men!</string>
+    <string name="damnnnnnnnnnnnnnnnnnnn">Damnnnnnnnnnnnnnnnnnnn</string>
+</resources>
