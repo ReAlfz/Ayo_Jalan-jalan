@@ -20,4 +20,8 @@
     <string name="select_photo">Select Photo</string>
     <string name="ayo_jalan_jalan_men">Ayo Jalan-jalan men!</string>
     <string name="damnnnnnnnnnnnnnnnnnnn">Damnnnnnnnnnnnnnnnnnnn</string>
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
+    <string name="name_group">Name Group</string>
+    <string name="jadwal_berangkat">Jadwal Berangkat</string>
 </resources>

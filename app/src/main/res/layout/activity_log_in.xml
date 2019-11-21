@@ -5,85 +5,108 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#c9c5c1"
-        tools:context=".Log_in">
+        android:layout_gravity="center"
+        android:background="@drawable/background"
+        tools:context=".loginRegister.Log_in">
 
-    <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="24dp"
-            app:cardCornerRadius="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="24dp">
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_gravity="center"
-                android:background="#7cd9e6"
-                android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/ion"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/logo_plane"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="155dp"
-                    android:layout_height="167dp" tools:src="@tools:sample/avatars"
-                    android:id="@+id/ion" app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="10dp" app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginEnd="20dp" app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginStart="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:textColorHint="#19535F"
+        android:layout_height="50dp"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="50dp"
+        android:paddingRight="15dp"
+        android:ems="10"
+        android:background="@drawable/edt_rounded"
+        android:id="@+id/emails"
+        android:layout_marginTop="75dp"
+        android:textColor="#19535F"
+        android:hint="@string/email"
+        app:layout_constraintTop_toBottomOf="@+id/ion" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:textColorHint="#19535F"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:paddingRight="15dp"
+        android:paddingLeft="50dp"
+        android:background="@drawable/edt_rounded"
+        android:ems="10"
+        android:hint="@string/password"
+        android:textColor="#19535F"
+        android:id="@+id/passw"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/emails" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"/>
+    <Button
+        android:text="masuk"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/log"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_user"
+        app:layout_constraintTop_toBottomOf="@+id/passw" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"/>
+    <TextView
+        android:text="Buat Akun"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:textColor="#19535F"
+        android:clickable="true"
+        android:gravity="center"
+        android:layout_height="wrap_content" android:id="@+id/sign_up"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/log" app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="100dp" app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="100dp" android:focusable="true"/>
 
-            <EditText
-                    android:layout_width="match_parent"
-                    android:textColorHint="#c8f2fa"
-                    android:layout_height="50dp"
-                    android:inputType="textEmailAddress"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:ems="10"
-                    android:background="@drawable/edt_rounded"
-                    android:id="@+id/emails"
-                    android:layout_marginTop="20dp"
-                    android:hint="@string/email"
-                    app:layout_constraintTop_toBottomOf="@+id/ion" app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="40dp"
-                    android:layout_marginEnd="40dp"/>
-            <EditText
-                    android:layout_width="match_parent"
-                    android:textColorHint="#c8f2fa"
-                    android:layout_height="50dp"
-                    android:inputType="textPassword"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
-                    android:background="@drawable/edt_rounded"
-                    android:ems="10"
-                    android:hint="@string/password"
-                    android:id="@+id/passw"
-                    android:layout_marginTop="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/emails" app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="40dp"
-                    android:layout_marginStart="40dp"/>
-            <Button
-                    android:text="@string/log_in"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:id="@+id/log"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/btn"
-                    app:layout_constraintTop_toBottomOf="@+id/passw" app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="60dp"
-                    android:layout_marginEnd="60dp"/>
-            <TextView
-                    android:text="@string/sign_Up"
-                    android:layout_width="match_parent"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:layout_height="wrap_content" android:id="@+id/sign_up"
-                    android:layout_marginTop="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/log" app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginStart="100dp" app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginEnd="100dp" android:focusable="true"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/passw"
+        app:layout_constraintStart_toStartOf="@+id/passw"
+        app:layout_constraintTop_toTopOf="@+id/passw"
+        app:srcCompat="@drawable/login_key" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/emails"
+        app:layout_constraintStart_toStartOf="@+id/emails"
+        app:layout_constraintTop_toTopOf="@+id/emails"
+        app:srcCompat="@drawable/login_email" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"
+        android:textColor="#0B132B"
+        android:fontFamily="@font/cream"
+        android:text="Ayo Jalan Jalan"
+        app:layout_constraintEnd_toEndOf="@+id/ion"
+        app:layout_constraintStart_toStartOf="@+id/ion"
+        app:layout_constraintTop_toBottomOf="@+id/ion" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,159 +5,183 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#c9c5c1"
-        tools:context=".Sign_Up">
+        android:background="@drawable/background"
+        tools:context=".loginRegister.Sign_Up">
 
-    <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="15dp"
-            app:cardCornerRadius="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="15dp">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="348dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:text="Buat Akun"
+        android:textColor="#A4B8C4"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#7cd9e6">
+    <Button
+        android:layout_width="150dp"
+        android:id="@+id/img_btn"
+        android:layout_height="150dp"
+        android:background="@drawable/img_rounded"
+        android:textColor="#19535F"
+        android:text="pilih foto"
+        app:layout_constraintBottom_toBottomOf="@+id/avt"
+        app:layout_constraintEnd_toEndOf="@+id/avt"
+        app:layout_constraintStart_toStartOf="@+id/avt"
+        app:layout_constraintTop_toTopOf="@+id/avt" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avt"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="110dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#8cd8d1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:srcCompat="@tools:sample/avatars" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="30dp"
-                    android:gravity="center"
-                    android:text="@string/register"
-                    android:textSize="34sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edt_rounded"
+        android:ems="10"
+        android:hint="@string/nama"
+        android:inputType="textPersonName"
+        android:paddingStart="45dp"
+        android:paddingRight="15dp"
+        android:text=""
+        android:textColor="#19535F"
+        android:textColorHint="#19535F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avt" />
 
-                <Button
-                    android:layout_width="120dp"
-                    android:id="@+id/img_btn"
-                    android:layout_height="120dp"
-                    android:background="@drawable/img_rounded"
-                    android:text="@string/select_photo"
-                    app:layout_constraintBottom_toBottomOf="@+id/avt"
-                    app:layout_constraintEnd_toEndOf="@+id/avt"
-                    app:layout_constraintStart_toStartOf="@+id/avt"
-                    app:layout_constraintTop_toTopOf="@+id/avt" />
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:textColor="#19535F"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edt_rounded"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="45dp"
+        android:paddingRight="15dp"
+        android:textColorHint="#19535F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtName" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/avt"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="110dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="110dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView"
-                    tools:srcCompat="@tools:sample/avatars" />
+    <EditText
+        android:id="@+id/edtNomor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edt_rounded"
+        android:ems="10"
+        android:hint="@string/nomor"
+        android:inputType="phone"
+        android:paddingLeft="45dp"
+        android:textColor="#19535F"
+        android:paddingRight="15dp"
+        android:textColorHint="#19535F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
-                <EditText
-                    android:id="@+id/edtName"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="40dp"
-                    android:background="@drawable/edt_rounded"
-                    android:ems="10"
-                    android:hint="@string/nama"
-                    android:inputType="textPersonName"
-                    android:paddingStart="15dp"
-                    android:paddingRight="15dp"
-                    android:text=""
-                    android:textColorHint="#c8f2fa"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/avt" />
+    <EditText
+        android:id="@+id/edtPass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edt_rounded"
+        android:textColor="#19535F"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingLeft="45dp"
+        android:paddingRight="15dp"
+        android:textColorHint="#19535F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNomor" />
 
-                <EditText
-                    android:id="@+id/edtEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="40dp"
-                    android:background="@drawable/edt_rounded"
-                    android:ems="10"
-                    android:hint="@string/email"
-                    android:inputType="textEmailAddress"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColorHint="#c8f2fa"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/edtName" />
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_user"
+        android:text="Buat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPass"
+        app:layout_constraintVertical_bias="0.494" />
 
-                <EditText
-                    android:id="@+id/edtNomor"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="40dp"
-                    android:background="@drawable/edt_rounded"
-                    android:ems="10"
-                    android:hint="@string/nomor"
-                    android:inputType="phone"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColorHint="#c8f2fa"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtName"
+        app:layout_constraintStart_toStartOf="@+id/edtName"
+        app:layout_constraintTop_toTopOf="@+id/edtName"
+        app:srcCompat="@drawable/register_users" />
 
-                <EditText
-                    android:id="@+id/edtPass"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="40dp"
-                    android:background="@drawable/edt_rounded"
-                    android:ems="10"
-                    android:hint="@string/password"
-                    android:inputType="textPassword"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColorHint="#c8f2fa"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/edtNomor" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtNomor"
+        app:layout_constraintStart_toStartOf="@+id/edtNomor"
+        app:layout_constraintTop_toTopOf="@+id/edtNomor"
+        app:srcCompat="@drawable/register_telp" />
 
-                <Button
-                    android:id="@+id/btn_register"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="70dp"
-                    android:layout_marginTop="35dp"
-                    android:layout_marginEnd="70dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn"
-                    android:text="Register"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/edtPass" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
-    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtPass"
+        app:layout_constraintStart_toStartOf="@+id/edtPass"
+        app:layout_constraintTop_toTopOf="@+id/edtPass"
+        app:srcCompat="@drawable/register_pass" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtEmail"
+        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintTop_toTopOf="@+id/edtEmail"
+        app:srcCompat="@drawable/register_email" />
 </androidx.constraintlayout.widget.ConstraintLayout>

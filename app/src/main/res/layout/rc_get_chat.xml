@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_marginLeft="40dp"
     android:layout_height="wrap_content"
+    android:layout_gravity="end"
     android:orientation="vertical">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_chat_get"
+        android:id="@+id/img_chat"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="1dp"
         app:civ_border_color="@android:color/darker_gray"
         app:civ_border_width="2dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,15 +23,29 @@
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
-        android:id="@+id/txt_chat_get"
+        android:id="@+id/username_chats"
+        android:layout_toLeftOf="@id/img_chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/edt_rounded"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="username"
+        android:textColor="#19535F"
+        app:layout_constraintBottom_toTopOf="@+id/text_chats"
+        app:layout_constraintEnd_toStartOf="@+id/img_chat"
+        app:layout_constraintTop_toTopOf="@+id/img_chat" />
+
+    <TextView
+        android:id="@+id/text_chats"
+        android:layout_below="@id/username_chats"
+        android:layout_toLeftOf="@id/img_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/chat_self"
         android:padding="10dp"
         android:text="CopyRight by undernet"
-        app:layout_constraintBottom_toBottomOf="@+id/img_chat_get"
-        app:layout_constraintEnd_toStartOf="@+id/img_chat_get"
-        app:layout_constraintTop_toTopOf="@+id/img_chat_get" />
+        app:layout_constraintBottom_toBottomOf="@+id/img_chat"
+        app:layout_constraintEnd_toStartOf="@+id/img_chat" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

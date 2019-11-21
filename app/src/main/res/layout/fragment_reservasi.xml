@@ -1,36 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:background="@drawable/back_chat"
              android:layout_height="match_parent"
-             tools:context=".Reservasi">
+             tools:context=".Bantuan">
+
     <LinearLayout
-            android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:weightSum="4"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_des"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_marginBottom="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_height="96dp">
-            <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                <TextView
-                        android:text="TextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:id="@+id/textView2"/>
-                <TextView
-                        android:text="TextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/textView3"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bantu"
+            android:layout_margin="5dp"
+            android:text="Destinasi Wisata" />
+
+        <Button
+            android:id="@+id/btn_rental"
+            android:layout_width="match_parent"
+            android:background="@drawable/btn_bantu"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Persewaan" />
+
+        <Button
+            android:id="@+id/btn_pemandu"
+            android:layout_width="match_parent"
+            android:background="@drawable/btn_bantu"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Pemandu Wisata" />
+
+        <Button
+            android:id="@+id/btn_tips"
+            android:layout_width="match_parent"
+            android:background="@drawable/btn_bantu"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Tips" />
+
     </LinearLayout>
-</FrameLayout>
+</LinearLayout>
